@@ -1,0 +1,77 @@
+<html><head><title>ACE ARF Browser</title>
+
+<!--<link href="hulmeaccidents.js" type="application/json" rel="exhibit/data" />-->
+<link rel="exhibit/data" 
+       type="application/jsonp"
+       href="https://spreadsheets.google.com/feeds/list/0AqXcKmXbCG-OdFlBekRhTTdCY3RtSzZRdnlDSEtITWc/od6/public/basic?alt=json-in-script"
+       ex:converter="googleSpreadsheets" />
+  
+    <script src="http://api.simile-widgets.org/exhibit/2.2.0/exhibit-api.js"
+            type="text/javascript"></script>
+
+<link rel="stylesheet" href="http://www.roadaccidentdata.org.uk/styles.css" type="text/css">
+
+
+
+
+</head>
+<body>
+
+
+<table id="frame">
+<tbody>
+<tr>
+<td colspan="3" id="content">
+	<h1>ACE ARF Browser</h1>
+	Use the menus to filter the data.  | To restart your search, click on "Reset all Filters". <br/>
+</td>
+</tr>
+<tr>
+
+<td id="sidebar">
+
+<div>
+	<h2>What....</h2>
+	</div><br/>
+
+<!-- <div ex:role="facet" ex:facetclass="TextSearch"ex:facetLabel="Search"></div>
+<br />-->
+
+<div ex:role="facet" ex:expression=".Mainartform" ex:facetLabel="Art form" ex:height="170px"></div>
+ <div ex:role="facet" ex:expression=".Subartform" ex:facetLabel="Sub art form" ex:height="420px"></div>
+
+</td>
+ <td id="content">
+  <div ex:role="exhibit-view"
+  ex:viewClass="Exhibit.TabularView"
+  ex:columns=" .label, .PROJECTTITLE, .Mainartform, .Subartform, .EnglishRegion, .AMOUNT_AWARDED"
+  ex:columnLabels="URN, Name, Main art form, Sub art form, Region, Amount"
+  ex:sortColumn="0"
+  ex:sortAscending="false">
+  </div>
+ </td>
+
+
+<td id="sidebar">
+
+<div>
+	<h2>Who...</h2>
+	</div><br/>
+
+<!-- <div ex:role="facet" ex:facetclass="TextSearch"ex:facetLabel="Search"></div>
+<br />-->
+
+<div ex:role="facet" ex:expression=".EnglishRegion" ex:facetLabel="English Region" ex:height="240px"></div>
+ <div ex:role="facet" ex:expression=".CYP" ex:facetLabel="Age audience" ex:height="60px"></div>
+ <div ex:role="facet" ex:expression=".Disabledaudience"   ex:facetLabel="Disabled audience?" ex:height="40px"></div>
+ <div ex:role="facet" ex:expression=".Sociallyexcluded" ex:facetLabel="Socially excluded audience?" ex:height="40px"></div>
+  <div ex:role="facet" ex:expression=".Agedover65" ex:facetLabel="Aged  over 65 audience?" ex:height="60px"></div>.
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+</body></html>
